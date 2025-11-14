@@ -5,6 +5,10 @@ import PostCard from '@/components/PostCard'
 
 export async function generateStaticParams() {
   const categories = getAllCategories()
+  // 빈 배열이면 빈 객체 반환 (빌드 오류 방지)
+  if (categories.length === 0) {
+    return []
+  }
   return categories.map((category) => ({
     category: encodeURIComponent(category),
   }))

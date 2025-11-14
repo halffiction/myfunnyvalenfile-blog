@@ -5,6 +5,10 @@ import PostCard from '@/components/PostCard'
 
 export async function generateStaticParams() {
   const tags = getAllTags()
+  // 빈 배열이면 빈 객체 반환 (빌드 오류 방지)
+  if (tags.length === 0) {
+    return []
+  }
   return tags.map((tag) => ({
     tag: encodeURIComponent(tag),
   }))
