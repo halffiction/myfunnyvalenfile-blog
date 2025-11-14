@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: '/myfunnyvalenfile-blog',
+  assetPrefix: '/myfunnyvalenfile-blog',
   images: {
     unoptimized: true,
   },
