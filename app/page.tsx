@@ -50,7 +50,7 @@ export default function Home() {
         }}>
           <h2 style={{ fontSize: '2rem', fontWeight: '600' }}>최신 포스트</h2>
           <Link 
-            href={`${basePath}/blog`}
+            href="/blog"
             style={{
               color: 'var(--accent)',
               textDecoration: 'none',
@@ -69,7 +69,7 @@ export default function Home() {
               <PostCard
                 key={post.slug}
                 post={post}
-                href={`${basePath}/blog/${post.slug}`}
+                href={`/blog/${post.slug}`}
               />
             ))}
           </div>

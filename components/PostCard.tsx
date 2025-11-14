@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { format } from 'date-fns'
 import { ko } from 'date-fns/locale'
 import { PostMetadata } from '@/lib/posts'
-import { basePath } from '@/lib/paths'
 
 interface PostCardProps {
   post: PostMetadata
@@ -12,12 +11,9 @@ interface PostCardProps {
 }
 
 export default function PostCard({ post, href }: PostCardProps) {
-  // href가 이미 basePath를 포함하고 있지 않으면 추가
-  const finalHref = href.startsWith(basePath) ? href : `${basePath}${href}`
-  
   return (
     <Link
-      href={finalHref}
+      href={href}
       className="post-card"
       style={{
         display: 'block',

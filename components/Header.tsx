@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { withBasePath } from '@/lib/paths'
 
 export default function Header() {
   const pathname = usePathname()
@@ -31,7 +30,7 @@ export default function Header() {
         maxWidth: '1200px',
         margin: '0 auto',
       }}>
-        <Link href={withBasePath('/')} style={{
+        <Link href="/" style={{
           fontSize: '1.5rem',
           fontWeight: 'bold',
           textDecoration: 'none',
@@ -52,7 +51,7 @@ export default function Header() {
           gap: '1.5rem',
           flexWrap: 'wrap',
         }}>
-          <Link href={withBasePath('/')} style={{
+          <Link href="/" style={{
             textDecoration: 'none',
             color: isActive('/') ? 'var(--accent)' : 'var(--text-primary)',
             fontWeight: isActive('/') ? '600' : '500',
@@ -62,7 +61,7 @@ export default function Header() {
           }}>
             Home
           </Link>
-          <Link href={withBasePath('/about')} style={{
+          <Link href="/about" style={{
             textDecoration: 'none',
             color: isActive('/about') ? 'var(--accent)' : 'var(--text-primary)',
             fontWeight: isActive('/about') ? '600' : '500',
@@ -72,7 +71,7 @@ export default function Header() {
           }}>
             About
           </Link>
-          <Link href={withBasePath('/blog')} style={{
+          <Link href="/blog" style={{
             textDecoration: 'none',
             color: isActive('/blog') ? 'var(--accent)' : 'var(--text-primary)',
             fontWeight: isActive('/blog') ? '600' : '500',
