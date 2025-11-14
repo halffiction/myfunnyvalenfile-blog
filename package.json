@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:github": "BASE_PATH=/myfunnyvalenfile-blog next build",
+    "build:nicepage": "BASE_PATH=/blog next build",
     "start": "next start",
     "lint": "next lint",
     "export": "next build"
@@ -29,4 +31,3 @@
     "eslint-config-next": "^14.0.4"
   }
 }
-
