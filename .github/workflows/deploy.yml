@@ -35,6 +35,14 @@ jobs:
         run: npm run build || (echo "Build failed" && exit 1)
         env:
           NODE_ENV: production
+      - name: List generated pages
+        run: |
+          echo "Checking generated static pages..."
+          find out -type f -name "*.html" | head -20 || echo "No HTML files found"
+          echo "Categories pages:"
+          ls -la out/categories/ 2>/dev/null || echo "No categories directory"
+          echo "Tags pages:"
+          ls -la out/tags/ 2>/dev/null || echo "No tags directory"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
