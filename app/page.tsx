@@ -18,18 +18,15 @@ export default function Home() {
           height: 'auto',
           margin: '0 auto'
         }}>
-          <Image
-            src="/carasoul-04.png"
+          <img
+            src="/myfunnyvalenfile-blog/carasoul-04.png"
             alt="my funny valen file' blog"
-            width={1200}
-            height={600}
             style={{
               width: '100%',
               height: 'auto',
               objectFit: 'cover',
               display: 'block'
             }}
-            priority
           />
         </div>
         <h3 style={{ 
