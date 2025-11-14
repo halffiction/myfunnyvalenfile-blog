@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { getAllPosts } from '@/lib/posts'
 import PostCard from '@/components/PostCard'
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/myfunnyvalenfile-blog'
 
 export default function Home() {
   const posts = getAllPosts().slice(0, 5) // 최신 5개만 표시
@@ -19,7 +20,7 @@ export default function Home() {
           margin: '0 auto'
         }}>
           <img
-            src="/myfunnyvalenfile-blog/carasoul-04.png"
+            src={`${basePath}/carasoul-04.png`}
             alt="my funny valen file' blog"
             style={{
               width: '100%',
