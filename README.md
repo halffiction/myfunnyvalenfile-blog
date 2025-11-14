@@ -67,17 +67,24 @@ npm run build
 
 ## GitHub Pages 배포
 
-### 방법 1: GitHub Actions (권장)
+### 자동 배포 (GitHub Actions) - ✅ 설정 완료
 
-1. GitHub 저장소에 코드를 푸시
-2. 저장소 Settings > Pages에서 Source를 "GitHub Actions"로 설정
-3. `.github/workflows/deploy.yml` 파일이 자동으로 배포를 처리합니다
+1. **GitHub에 코드 푸시** (인증 필요):
+   ```bash
+   git push -u origin main
+   ```
+   - Personal Access Token 또는 GitHub CLI 사용 필요
 
-### 방법 2: 수동 배포
+2. **GitHub Pages 설정**:
+   - 저장소 Settings > Pages로 이동
+   - Source를 **"GitHub Actions"**로 선택
+   - 저장하면 자동 배포 시작
 
-1. `npm run build` 실행
-2. `out/` 폴더의 내용을 `gh-pages` 브랜치에 푸시
-3. GitHub 저장소 Settings > Pages에서 `gh-pages` 브랜치를 선택
+3. **배포 확인**:
+   - 배포 완료 후: `https://halffiction.github.io/myfunnyvalenfile-blog/`
+   - GitHub Actions 탭에서 배포 진행 상황 확인
+
+자세한 내용은 [DEPLOY.md](./DEPLOY.md)를 참고하세요.
 
 ## 사용 기술
 
