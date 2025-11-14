@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { getAllPosts } from '@/lib/posts'
 import PostCard from '@/components/PostCard'
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/blog'
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/myfunnyvalenfile-blog'
 
 export default function Home() {
   const posts = getAllPosts().slice(0, 5) // 최신 5개만 표시

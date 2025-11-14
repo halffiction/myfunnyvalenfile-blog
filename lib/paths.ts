@@ -1,7 +1,7 @@
 // basePath를 처리하는 유틸리티
 // GitHub Pages: '/myfunnyvalenfile-blog'
-// Nicepage: '/blog'
-export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/blog'
+// Nicepage: '/blog' (로컬 빌드 시 BASE_PATH=/blog 설정)
+export const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '/myfunnyvalenfile-blog'
 
 export function withBasePath(path: string): string {
   // 이미 basePath가 포함되어 있으면 그대로 반환

@@ -35,6 +35,7 @@ jobs:
         run: npm run build || (echo "Build failed" && exit 1)
         env:
           NODE_ENV: production
+          BASE_PATH: /myfunnyvalenfile-blog
       - name: List generated pages
         run: |
           echo "Checking generated static pages..."
